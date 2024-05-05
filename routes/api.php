@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 //    return $request->user();
 //});
 
-Route::group(['namespace' => 'App\Http\Controllers', 'prefix' => 'v1'], function () {
+Route::group(['namespace' => 'App\Http\Controllers', 'prefix' => 'v1', 'middleware' => 'cors'], function () {
 
 
     Route::group(['prefix' => 'category'], function (){
