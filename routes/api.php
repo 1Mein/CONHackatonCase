@@ -32,4 +32,10 @@ Route::group(['namespace' => 'App\Http\Controllers', 'prefix' => 'v1'], function
         Route::get('/{service}', 'ServiceController@show');
     });
 
+    Route::group(['prefix' => 'record'], function (){
+        Route::get('', 'RecordController@index');
+        Route::get('/{record}', 'RecordController@show');
+        Route::post('/store', 'RecordController@store');
+    });
+
 });
