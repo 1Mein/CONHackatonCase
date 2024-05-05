@@ -23,6 +23,5 @@ class CategoryController extends Controller
         $services = $category->services()->get();
 
         return response()->json($services);
-
     }
 }
